@@ -1,0 +1,74 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 1600"
+  width="1200"
+  height="1600"
+  role="presentation"
+>
+  <!--
+    PLACEHOLDER PORTRAIT — see plan/02-phase2-navbar-hero-plan.md §3.3.
+
+    Swap contract for the real photograph (replace this file, keep the name):
+      - aspect ratio 3:4 (1200 x 1600 or any multiple),
+      - monochrome, high contrast (editorial chiaroscuro), no colour cast,
+      - >= 1200px wide; WebP/AVIF preferred (ROADMAP §5.1).
+
+    Nothing else needs to change: src/components/hero.tsx imports this file and
+    passes 1200/1600 as the intrinsic dimensions, which is what keeps CLS at 0.
+  -->
+  <defs>
+    <linearGradient id="psBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f1f23" />
+      <stop offset="1" stop-color="#09090b" />
+    </linearGradient>
+    <radialGradient id="psKey" cx="0.32" cy="0.26" r="0.78">
+      <stop offset="0" stop-color="#e4e4e7" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#e4e4e7" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="psFigure" x1="0.15" y1="0.05" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#3f3f46" />
+      <stop offset="0.4" stop-color="#18181b" />
+      <stop offset="1" stop-color="#09090b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Backdrop + key light -->
+  <rect width="1200" height="1600" fill="url(#psBg)" />
+  <ellipse cx="380" cy="430" rx="540" ry="580" fill="url(#psKey)" />
+
+  <!-- Torso -->
+  <path
+    d="M200 1600C200 1326 330 1158 558 1088h84c228 70 358 238 358 512z"
+    fill="url(#psFigure)"
+  />
+  <!-- Neck -->
+  <path d="M536 826h128v300H536z" fill="#101013" />
+  <!-- Head -->
+  <ellipse cx="600" cy="620" rx="200" ry="250" fill="url(#psFigure)" />
+
+  <!-- Rim light (upper-left) and shoulder highlight -->
+  <path
+    d="M470 440A200 250 0 0 1 610 372"
+    fill="none"
+    stroke="#e4e4e7"
+    stroke-opacity="0.35"
+    stroke-width="10"
+    stroke-linecap="round"
+  />
+  <path
+    d="M470 800c-30-88-46-176-46-264"
+    fill="none"
+    stroke="#fafafa"
+    stroke-opacity="0.14"
+    stroke-width="8"
+    stroke-linecap="round"
+  />
+  <path
+    d="M598 1084c-88 34-152 92-192 168"
+    fill="none"
+    stroke="#fafafa"
+    stroke-opacity="0.12"
+    stroke-width="8"
+    stroke-linecap="round"
+  />
+</svg>
